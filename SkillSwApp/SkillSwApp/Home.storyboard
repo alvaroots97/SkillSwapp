@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xR8-8L-itF">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="NTd-Ri-r9a">
+            <objects>
+                <viewController storyboardIdentifier="menuVC" id="Dmj-bJ-TvE" customClass="MenuViewController" customModule="SkillSwApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YCh-GR-aIt" customClass="Home">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-ME-6sl">
+                                <rect key="frame" x="100" y="49" width="214" height="25.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xb8-VY-HwP">
+                                <rect key="frame" x="25" y="79.333333333333314" width="364" height="216"/>
+                            </pickerView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r4H-4f-ov3">
+                                <rect key="frame" x="5" y="300.33333333333326" width="403" height="429.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ola-0i-mjH"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="gOe-ME-6sl" firstAttribute="centerX" secondItem="YCh-GR-aIt" secondAttribute="centerX" id="3Oa-51-Bnh"/>
+                            <constraint firstItem="xb8-VY-HwP" firstAttribute="top" secondItem="gOe-ME-6sl" secondAttribute="bottom" constant="5" id="A1B-45-Aow"/>
+                            <constraint firstItem="xb8-VY-HwP" firstAttribute="centerX" secondItem="YCh-GR-aIt" secondAttribute="centerX" id="EGX-oG-MqE"/>
+                            <constraint firstItem="Ola-0i-mjH" firstAttribute="trailing" secondItem="r4H-4f-ov3" secondAttribute="trailing" constant="6" id="JhR-jX-dXb"/>
+                            <constraint firstItem="Ola-0i-mjH" firstAttribute="trailing" secondItem="gOe-ME-6sl" secondAttribute="trailing" constant="100" id="dU0-in-beG"/>
+                            <constraint firstItem="xb8-VY-HwP" firstAttribute="centerX" secondItem="YCh-GR-aIt" secondAttribute="centerX" id="dc4-8i-tVh"/>
+                            <constraint firstItem="xb8-VY-HwP" firstAttribute="leading" secondItem="Ola-0i-mjH" secondAttribute="leading" constant="25" id="hEP-Zy-kUU"/>
+                            <constraint firstItem="r4H-4f-ov3" firstAttribute="top" secondItem="xb8-VY-HwP" secondAttribute="bottom" constant="5" id="i4d-HO-4zk"/>
+                            <constraint firstItem="gOe-ME-6sl" firstAttribute="top" secondItem="Ola-0i-mjH" secondAttribute="top" constant="5" id="mCM-bj-QmS"/>
+                            <constraint firstItem="Ola-0i-mjH" firstAttribute="bottom" secondItem="r4H-4f-ov3" secondAttribute="bottom" constant="6" id="pj9-ba-a1a"/>
+                            <constraint firstItem="gOe-ME-6sl" firstAttribute="leading" secondItem="Ola-0i-mjH" secondAttribute="leading" constant="100" id="qhj-gP-96l"/>
+                            <constraint firstItem="Ola-0i-mjH" firstAttribute="trailing" secondItem="xb8-VY-HwP" secondAttribute="trailing" constant="25" id="sCH-1y-K3H"/>
+                            <constraint firstItem="r4H-4f-ov3" firstAttribute="leading" secondItem="Ola-0i-mjH" secondAttribute="leading" constant="5" id="wG4-zz-qdH"/>
+                            <constraint firstItem="r4H-4f-ov3" firstAttribute="centerX" secondItem="YCh-GR-aIt" secondAttribute="centerX" id="xiT-My-Xn2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XE7-wt-qkW"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="r4H-4f-ov3" id="Mpq-Cs-81b"/>
+                        <outlet property="skillsPickerViews" destination="xb8-VY-HwP" id="EpQ-mz-3Of"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbC-76-hGi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.8550724637682" y="136.14130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sxD-4I-QaZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xR8-8L-itF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dhT-A5-Ef2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dmj-bJ-TvE" kind="relationship" relationship="rootViewController" id="QB1-XC-aS5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibX-Az-mkr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.71014492753625" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
